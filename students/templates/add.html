@@ -1,0 +1,66 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 class="my-2">ADD STUDENT</h1>
+  <form method = "POST">
+    {% csrf_token %}
+   
+    <div class="form-row">
+      <div class="form-group col-md-6 my-1">
+        <label for="sname">Student name</label>
+        <input type="text" class="form-control" id="sname" placeholder="Enter student name" name="student_name">
+      </div>
+      <div class="form-group col-md-4 my-1">
+        <label for="inputGender">Gender</label>
+        <select id="inputGender" class="form-control" name="gender">
+          <option selected>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group col-md-6 my-1">
+        <label for="dob">Date of birth</label>
+        <input type="date" class="form-control" id="dob" placeholder="Enter dob" name="dob">
+      </div>
+    </div>
+     <div class="form-group col-md-4 my-1">
+        <label for="grade">Grade</label>
+        <select id="grade" name="grade" class="form-control">
+          <option selected>BIM</option>
+          <option>BBM</option>
+          <option>BBA</option>
+          <option>BCA</option>
+          <option>CSIT</option>
+        </select>
+      </div>
+      <div class="form-group col-md-4 my-1">
+        <label for="semester">Semester</label>
+        <select id="semester" name="semester" class="form-control">
+          <option selected>1st</option>
+          <option>2nd</option>
+          <option>3rd</option>
+          <option>4th</option>
+          <option>5th</option>
+          <option>6th</option>
+          <option>7th</option>
+          <option>8th</option>
+        </select>
+      </div>
+    
+      <div class="form-group my-1">
+        <label for="inputEmail">Email</label>
+        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Enter email">
+      </div>
+      <div class="form-group my-1">
+        <label for="inputPhone">Phone Number</label>
+        <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="Enter phone number">
+      </div>
+      <div class="form-group my-2">
+        <label for="inputAddress">Address</label>
+        <input type="text" class="form-control" id="inputAddress" name="address" placeholder="Enter address">
+      </div>
+      
+    
+    
+    <button type="submit" class="btn btn-primary">Add</button>
+  </form>
+{% endblock %}

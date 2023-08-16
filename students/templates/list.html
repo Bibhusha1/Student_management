@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h1 class="my-2">STUDENT LISTING</h1>
+  <div class="d-flex flex-wrap">
+  {% for i in students %}
+  <div class="card m-2" style="width: 25rem; border: 1px solid #dee2e6; border-radius: 10px;">
+    <div class="card-header" style="background-color: rgb(54, 54, 54); color: white;">
+      #{{i.id}}
+    </div>
+      <div class="card-body">
+        <h5 class="card-title">{{i.name}} </h5>
+        <p class="card-text">Gender: {{i.gender}}</p>
+        <p class="card-text">DOB: {{i.dob}}</p>
+        <p class="card-text">Grade: {{i.grade}}</p>
+        <p class="card-text">Semester: {{i.semester}}</p>
+        <p class="card-text">Email ID: {{i.emailid}}</p>
+        <p class="card-text">Phone: {{i.phone}}</p>
+        <p class="card-text">Address: {{i.address}}</p>
+
+      </div>
+  </div>
+
+{% endfor %}
+  </div>
+</div>
+
+{% endblock %}

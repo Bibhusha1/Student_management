@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+  <h1 class="my-2">DELETE STUDENT</h1>
+  <form method="POST">
+    {% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-md-6 my-2">
+        <label for="id">ID</label>
+        <input type="number" class="form-control" id="id" placeholder="Enter ID" name="id">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Delete</button>
+  </form>
+</div>
+{% endblock %}
